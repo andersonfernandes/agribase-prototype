@@ -34,7 +34,7 @@ export default function App(props) {
           navbarOffsetBreakpoint="sm"
           fixed
           padding="md"
-          navbar={<AppNavbar hidden={hiddenMenu} />}
+          navbar={<AppNavbar hidden={hiddenMenu} setHidden={setHiddenMenu} />}
           header={<AppHeader hiddenMenu={hiddenMenu} setHiddenMenu={setHiddenMenu} />}
         >
           <Container>

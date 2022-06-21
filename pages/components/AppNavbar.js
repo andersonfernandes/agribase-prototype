@@ -1,11 +1,12 @@
 import { Group, Navbar, Text, ThemeIcon, UnstyledButton } from '@mantine/core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faComputer, faAtom } from '@fortawesome/free-solid-svg-icons'
+import { faSeedling, faHandHoldingDollar } from '@fortawesome/free-solid-svg-icons'
+import Link from 'next/link';
 
-export default function AppNavbar({ hidden }) {
+export default function AppNavbar({ hidden, setHidden }) {
   const links = [
-    {label: 'Item 1', icon: <FontAwesomeIcon icon={faComputer} />},
-    {label: 'Item 2', icon: <FontAwesomeIcon icon={faAtom} />}
+    {label: 'Culturas', icon: <FontAwesomeIcon icon={faSeedling} />, link: '/cultures'},
+    {label: 'Financeiro', icon: <FontAwesomeIcon icon={faHandHoldingDollar} />, link: '/financial'}
   ]
 
   return (
@@ -15,7 +16,7 @@ export default function AppNavbar({ hidden }) {
       hidden={hidden}
       p="md"
     >
-      {links.map(({ label, icon }) => (
+      {links.map(({ label, icon, link }) => (
         <UnstyledButton
           key={label}
           sx={(theme) => ({
@@ -29,13 +30,15 @@ export default function AppNavbar({ hidden }) {
               },
           })}
         >
-          <Group>
-            <ThemeIcon color="gray" variant="light">
-              {icon}
-            </ThemeIcon>
+          <Link href={link}>
+            <Group onClick={() => setHidden(true)}>
+              <ThemeIcon color="gray" variant="light">
+                {icon}
+              </ThemeIcon>
 
-            <Text size="sm">{label}</Text>
-          </Group>
+              <Text size="sm">{label}</Text>
+            </Group>
+          </Link>
         </UnstyledButton>
       ))}
     </Navbar>
