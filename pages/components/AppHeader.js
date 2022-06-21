@@ -4,6 +4,7 @@ import {
   MediaQuery,
   Burger
 } from '@mantine/core';
+import Link from 'next/link';
 
 export default function AppHeader({ hiddenMenu, setHiddenMenu }) {
   return (
@@ -18,14 +19,14 @@ export default function AppHeader({ hiddenMenu, setHiddenMenu }) {
           />
         </MediaQuery>
 
-        <div>
+        <Link href={'/'}>
           <Image
             radius="md"
             src="./assets/logo.png"
             alt="App Logo"
             width="150px"
           />
-        </div>
+        </Link>
       </div>
     </Header>
   )
