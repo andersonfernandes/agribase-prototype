@@ -5,6 +5,7 @@ import {
   Burger
 } from '@mantine/core';
 import Link from 'next/link';
+import styles from './AppHeader.module.scss';
 
 export default function AppHeader({ hiddenMenu, setHiddenMenu }) {
   return (
@@ -25,6 +26,7 @@ export default function AppHeader({ hiddenMenu, setHiddenMenu }) {
             src="./assets/logo.png"
             alt="App Logo"
             width="150px"
+            className={styles.logo}
           />
         </Link>
       </div>

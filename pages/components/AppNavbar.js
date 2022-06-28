@@ -5,8 +5,8 @@ import Link from 'next/link';
 
 export default function AppNavbar({ hidden, setHidden }) {
   const links = [
-    {label: 'Culturas', icon: <FontAwesomeIcon icon={faSeedling} />, link: '/cultures'},
-    {label: 'Financeiro', icon: <FontAwesomeIcon icon={faHandHoldingDollar} />, link: '/financial'}
+    {label: 'Culturas', icon: <FontAwesomeIcon icon={faSeedling} />, link: '/culturas'},
+    {label: 'Financeiro', icon: <FontAwesomeIcon icon={faHandHoldingDollar} />, link: '/financas'}
   ]
 
   return (
