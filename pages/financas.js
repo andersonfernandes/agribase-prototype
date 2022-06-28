@@ -24,7 +24,7 @@ export default function Financas() {
         <thead>
           <tr>
             <th>Cultura</th>
-            <th>Valor médio de marcado</th>
+            <th>Valor médio de mercado</th>
           </tr>
         </thead>
         <tbody>{rows}</tbody>
