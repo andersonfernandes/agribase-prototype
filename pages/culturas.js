@@ -36,6 +36,7 @@ export default function Culturas() {
             <CultureDetails
               title={text}
               opened={openedModal[index]}
+              image={image}
               setOpened={(value) => handleModalToggle(value, index)}
             />
 
