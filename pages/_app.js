@@ -1,7 +1,7 @@
 import {useEffect, useState} from 'react'
 
 import Head from 'next/head'
-import { AppShell, Container, MantineProvider } from '@mantine/core'
+import {AppShell, Container, MantineProvider} from '@mantine/core'
 import {useViewportSize} from '@mantine/hooks'
 
 import AppHeader from './components/AppHeader'
@@ -27,7 +27,7 @@ export default function App(props) {
         withGlobalStyles
         withNormalizeCSS
         theme={{
-          colorScheme: 'light',
+          colorScheme: 'dark',
         }}
       >
         <AppShell

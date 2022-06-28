@@ -1,2 +1,7 @@
 .culture {
+  cursor: pointer;
+
+  &:hover {
+    background-color: #141517;
+  }
 }

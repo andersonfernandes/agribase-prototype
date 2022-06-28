@@ -1,15 +1,15 @@
 import {useState} from 'react'
-import {Grid, Image} from '@mantine/core'
+import {Center, Grid, Image, Text} from '@mantine/core'
 import styles from '../styles/Culturas.module.scss'
 import CultureDetails from './components/CultureDetails'
 
 const CULTURES = [
-  {image: './assets/real/banana.png', text: 'Banana'},
-  {image: './assets/real/mango.png', text: 'Manga'},
-  {image: './assets/real/orange.png', text: 'Laranja'},
-  {image: './assets/real/papaya.png', text: 'Mamão'},
-  {image: './assets/real/pineapple.png', text: 'Abacaxi'},
-  {image: './assets/real/watermelon.png', text: 'Melancia'},
+  {image: './assets/real-icons/pineapple.png', text: 'Abacaxi'},
+  {image: './assets/real-icons/banana.png', text: 'Banana'},
+  {image: './assets/real-icons/orange.png', text: 'Laranja'},
+  {image: './assets/real-icons/papaya.png', text: 'Mamão'},
+  {image: './assets/real-icons/mango.png', text: 'Manga'},
+  {image: './assets/real-icons/watermelon.png', text: 'Melancia'},
 ]
 
 export default function Culturas() {
@@ -23,27 +23,37 @@ export default function Culturas() {
   }
 
   return (
-    <Grid>
-      {CULTURES.map(({image, text}, index) => (
-        <Grid.Col
-          md={4}
-          gutter="xl"
-          key={text}
-          className={styles.culture}
-        >
-          <CultureDetails
-            title={text}
-            opened={openedModal[index]}
-            setOpened={(value) => handleModalToggle(value, index)}
-          />
+    <>
+      <h1>Culturas</h1>
 
-          <Image
-            src={image}
-            alt={text}
-            onClick={() => handleModalToggle(true, index)}
-          />
-        </Grid.Col>
-      ))}
-    </Grid>
+      <Grid gutter="lg">
+        {CULTURES.map(({image, text}, index) => (
+          <Grid.Col
+            md={4}
+            key={text}
+            className={styles.culture}
+          >
+            <CultureDetails
+              title={text}
+              opened={openedModal[index]}
+              setOpened={(value) => handleModalToggle(value, index)}
+            />
+
+            <Center p="md">
+              <Image
+                src={image}
+                alt={text}
+                width={200}
+                onClick={() => handleModalToggle(true, index)}
+              />
+            </Center>
+
+            <Text weight={700} size="lg" align="center">
+              {text}
+            </Text>
+          </Grid.Col>
+        ))}
+      </Grid>
+    </>
   )
 }

@@ -26,7 +26,7 @@ export default function AppNavbar({ hidden, setHidden }) {
               borderRadius: theme.radius.sm,
 
               '&:hover': {
-                backgroundColor: theme.colors.dark[8],
+                backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.colors.gray[0],
               },
           })}
         >
