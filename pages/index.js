@@ -3,5 +3,5 @@ export default function Home() {
     <>
       <h1>conteudo aqui</h1>
     </>
-  );
+  )
 }

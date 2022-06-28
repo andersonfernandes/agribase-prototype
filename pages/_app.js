@@ -1,20 +1,20 @@
-import {useEffect, useState} from 'react';
+import {useEffect, useState} from 'react'
 
-import Head from 'next/head';
-import { AppShell, Container, MantineProvider } from '@mantine/core';
-import {useViewportSize} from '@mantine/hooks';
+import Head from 'next/head'
+import { AppShell, Container, MantineProvider } from '@mantine/core'
+import {useViewportSize} from '@mantine/hooks'
 
-import AppHeader from './components/AppHeader';
-import AppNavbar from './components/AppNavbar';
+import AppHeader from './components/AppHeader'
+import AppNavbar from './components/AppNavbar'
 
 export default function App(props) {
-  const { Component, pageProps } = props;
-  const { width } = useViewportSize();
+  const { Component, pageProps } = props
+  const { width } = useViewportSize()
   const [hiddenMenu, setHiddenMenu] = useState(false)
 
   useEffect(() => {
-    width <= 768 ? setHiddenMenu(true) : setHiddenMenu(false);
-  }, [width]);
+    width <= 768 ? setHiddenMenu(true) : setHiddenMenu(false)
+  }, [width])
 
   return (
     <>
@@ -43,5 +43,5 @@ export default function App(props) {
         </AppShell>
       </MantineProvider>
     </>
-  );
+  )
 }

@@ -3,9 +3,9 @@ import {
   Image,
   MediaQuery,
   Burger
-} from '@mantine/core';
-import Link from 'next/link';
-import styles from './AppHeader.module.scss';
+} from '@mantine/core'
+import Link from 'next/link'
+import styles from './AppHeader.module.scss'
 
 export default function AppHeader({ hiddenMenu, setHiddenMenu }) {
   return (

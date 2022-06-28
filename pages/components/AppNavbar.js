@@ -1,7 +1,7 @@
-import { Group, Navbar, Text, ThemeIcon, UnstyledButton } from '@mantine/core';
+import { Group, Navbar, Text, ThemeIcon, UnstyledButton } from '@mantine/core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSeedling, faHandHoldingDollar } from '@fortawesome/free-solid-svg-icons'
-import Link from 'next/link';
+import Link from 'next/link'
 
 export default function AppNavbar({ hidden, setHidden }) {
   const links = [
@@ -26,7 +26,7 @@ export default function AppNavbar({ hidden, setHidden }) {
               borderRadius: theme.radius.sm,
 
               '&:hover': {
-                backgroundColor: theme.colors.gray[0],
+                backgroundColor: theme.colors.dark[8],
               },
           })}
         >
