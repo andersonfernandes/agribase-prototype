@@ -20,7 +20,7 @@ export default function AppHeader({ hiddenMenu, setHiddenMenu }) {
           />
         </MediaQuery>
 
-        <Link href={'/'}>
+        <Link href={'/'} onClick={() => setHiddenMenu(true)}>
           <Image
             radius="md"
             src="./assets/logo.png"

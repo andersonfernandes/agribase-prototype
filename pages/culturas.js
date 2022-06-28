@@ -15,7 +15,6 @@ const CULTURES = [
 export default function Culturas() {
   const [openedModal, setOpenedModal] = useState(new Array(CULTURES.length).fill(false))
   const handleModalToggle = (value, index) => {
-    console.log(index, value)
     setOpenedModal(oldValues => {
       oldValues.splice(index, 1, value)
       return [...oldValues]
